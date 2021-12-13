@@ -43,9 +43,9 @@ Emp_ID | Unique identifier for a row
 2. Churn is determined based on not null values in last working date column. 
 3. The train dataframe is grouped using ‘Emp_ID’. The values of the features for the entire 2 years are aggregated for each employee. 
 4. Encoding categorical variables
-a. Gender column is one-hot encoded. 
-b. City is a column with high cardinality. Hence, it is encoded using frequency encoding.
-c. Education column is an ordinal column. It is converted to a numerical column by cat codes. 
+- a. Gender column is one-hot encoded. 
+- b. City is a column with high cardinality. Hence, it is encoded using frequency encoding.
+- c. Education column is an ordinal column. It is converted to a numerical column by cat codes. 
 5.  Rows from train dataset are merged into test dataset using Emp_ID as primary key.
 
 
