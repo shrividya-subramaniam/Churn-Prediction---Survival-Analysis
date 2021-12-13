@@ -1,6 +1,7 @@
 # Churn-Prediction--Survival-Analysis
 Solution to Analytics Vidhya Job-a-thon November Hackathon
 
+
 ## Problem Statement
 In recent years, attention has increasingly been paid to human resources (HR), since worker quality and skills represent a growth factor and a real competitive advantage for companies. After proving its mettle in sales and marketing, artificial intelligence is also becoming central to employee-related decisions within HR management. Organizational growth largely depends on staff retention. Losing employees frequently impacts the morale of the organization and hiring new employees is more expensive than retaining existing ones. 
 
@@ -10,6 +11,7 @@ To aid staffing, you are provided with the monthly information for a segment of 
 1. Demographics of the employee (city, age, gender etc.)
 2. Tenure information (joining date, Last Date)
 3. Historical data regarding the performance of the employee (Quarterly rating, Monthly business acquired, designation, salary)
+
 
 ## Data Dictionary
 
@@ -35,6 +37,7 @@ Variable | Definition
 --- | ---
 Emp_ID | Unique identifier for a row
 
+
 ## Data Pre-processing
 1. Total number of days that the employee has worked is calculated using reporting date, next reporting date, date of joining and last working date(if the employee left). 
 2. Churn is determined based on not null values in last working date column. 
@@ -45,8 +48,10 @@ Emp_ID | Unique identifier for a row
    c. Education column is an ordinal column. It is converted to a numerical column by cat codes. 
 5.  Rows from train dataset are merged into test dataset using Emp_ID as primary key.
 
+
 ## Evaluation Metric
 The evaluation metric for this competition is macro f1_score. 
+
 
 ## Approach
 - Since this is a churn prediction (classification) problem with time series data, survival analysis will be an ideal approach.
@@ -58,6 +63,7 @@ The evaluation metric for this competition is macro f1_score.
 - The model used is Cox Proportional Hazards Regression
 - The model performance is evaluated using K-fold cross validation with concordance index as score.
 - For the leaderboard standings of the competition, Macro F1 score is used to evaluate the model using the predicted values.
+
 
 ## Leaderboard
 - [Public Leaderboard](https://datahack.analyticsvidhya.com/contest/job-a-thon-november-2021/#LeaderBoard): 51st Rank
